@@ -16,7 +16,8 @@ var CustomerSchema = new Schema({
         type: String
     },
     role: {
-        type: String
+        type: String,
+        default: "customer"
     },
     username: {
         type: String
@@ -93,10 +94,12 @@ var CustomerSchema = new Schema({
         }
     },
     is_paying_customer: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     avatar_url: {
-        type: String
+        type: String,
+        default: "https://secure.gravatar.com/avatar/8eb1b522f60d11fa897de1dc6351b7e8?s=96"
     },
     meta_data: {
         type: [ metaData ]
