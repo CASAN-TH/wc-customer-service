@@ -99,7 +99,9 @@ describe('Customer CRUD routes tests', function () {
                         assert.equal(resp.data.first_name, mockup.first_name);
                         assert.equal(resp.data.last_name, mockup.last_name);
                         assert.equal(resp.data.username, mockup.username);
-
+                        assert.equal(resp.data.role , "customer")
+                        assert.equal(resp.data.avatar_url , "https://secure.gravatar.com/avatar/8eb1b522f60d11fa897de1dc6351b7e8?s=96")
+                        assert.equal(resp.data.is_paying_customer, false)
                         assert.equal(resp.data.billing.first_name, mockup.billing.first_name);
                         assert.equal(resp.data.billing.last_name, mockup.billing.last_name);
                         assert.equal(resp.data.billing.company, mockup.billing.company);
